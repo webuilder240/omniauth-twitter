@@ -1,5 +1,5 @@
 module OmniAuth
-  module Twitter
+  module CustomTwitter
     VERSION = "1.4.0"
   end
 end

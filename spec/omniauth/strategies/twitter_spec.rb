@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe OmniAuth::Strategies::Twitter do
+describe OmniAuth::Strategies::CustomTwitter do
   let(:request) { double('Request', :params => {}, :cookies => {}, :env => {}) }
 
   subject do
     args = ['appid', 'secret', @options || {}].compact
-    OmniAuth::Strategies::Twitter.new(*args).tap do |strategy|
+    OmniAuth::Strategies::CustomTwitter.new(*args).tap do |strategy|
       allow(strategy).to receive(:request) {
         request
       }
@@ -14,7 +14,7 @@ describe OmniAuth::Strategies::Twitter do
 
   describe 'client options' do
     it 'should have correct name' do
-      expect(subject.options.name).to eq('twitter')
+      expect(subject.options.name).to eq('custom_twitter')
     end
 
     it 'should have correct site' do

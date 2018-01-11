@@ -3,9 +3,9 @@ require 'json'
 
 module OmniAuth
   module Strategies
-    class Twitter < OmniAuth::Strategies::OAuth
-      option :name, 'twitter'
-
+    class CustomTwitter < OmniAuth::Strategies::OAuth
+      option :name, 'custom_twitter'
+      option :callback_path, '/auth/twitter/callback'
       option :client_options, {:authorize_path => '/oauth/authenticate',
                                :site => 'https://api.twitter.com',
                                :proxy => ENV['http_proxy'] ? URI(ENV['http_proxy']) : nil}

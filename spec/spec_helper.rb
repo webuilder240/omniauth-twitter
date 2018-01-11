@@ -8,7 +8,7 @@ require 'rspec'
 require 'rack/test'
 require 'webmock/rspec'
 require 'omniauth'
-require 'omniauth-twitter'
+require 'omniauth-custom_twitter'
 
 RSpec.configure do |config|
   config.include WebMock::API
