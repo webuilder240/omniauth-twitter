@@ -168,7 +168,7 @@ describe OmniAuth::Strategies::CustomTwitter do
       end
 
       it 'should return the default callback_path value' do
-        expect(subject.callback_path).to eq '/auth/twitter/callback'
+        expect(subject.callback_path).to eq '/auth/custom_twitter/callback'
       end
     end
 
